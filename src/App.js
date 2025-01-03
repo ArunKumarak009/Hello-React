@@ -66,7 +66,7 @@ dishPrice:obj.dish_price
         
         setCategories(updatedCategories) 
         setSelectedCategory(updatedCategories[0].menuCategoryId)  
-        console.log(selectedCategory)
+        
         setLoading(false) 
         setCategoryItems(updatedItemDetails)
 
@@ -85,7 +85,7 @@ dishPrice:obj.dish_price
   const changeCategory = (id) =>{
     const getCategory = products[0].table_menu_list.find(eachItem => eachItem.menu_category_id === id) 
     const getDetails =  getCategory.category_dishes.map(eachItem => itemDetailsConvertToCamel(eachItem))
-    console.log(getDetails)
+ 
     setCategoryItems(getDetails) 
     setSelectedCategory(id)
   }
@@ -172,7 +172,8 @@ const removeFromCart = (product) => {
   
   const renderProducts = () => {
     
-    console.log(categoryItems)
+    
+    console.log(cart)
     
     return loading? <p>loading</p> : <>
     

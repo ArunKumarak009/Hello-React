@@ -43,7 +43,7 @@ console.log(dishName)
                     {getQuantity}
                     <button onClick={onClickRemoveFromCart} >-</button>
                   </div>) }
-            {dishName} 
+            
             
         </li>
     )
